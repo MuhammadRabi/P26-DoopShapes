@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["console","log","hisWork","document","querySelector"],"mappings":"AAAAA,QAAAC,IAAA,mBAEA,IAAAC,QAAAC,SAAAC,cAAA","file":"all.js","sourcesContent":["console.log(\"gulp is working\");\r\n\r\nlet hisWork = document.querySelector(\"h1\");\r\n"]}
