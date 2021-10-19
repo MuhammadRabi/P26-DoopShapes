@@ -18,9 +18,10 @@
       font-weight: 700;
     }
     h2 {
-      font-size: 45px;
-      font-weight: 700;
       padding-right: 75px;
+      @include media-breakpoint-down(md) {
+        padding-right: 5px;
+      }
     }
     p {
       line-height: 2;

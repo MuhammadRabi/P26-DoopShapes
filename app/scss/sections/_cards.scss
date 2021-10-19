@@ -10,11 +10,19 @@
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
   .button {
-    width: 40%;
+    width: 46%;
+    @include media-breakpoint-down(lg) {
+      width: 25%;
+      margin: auto;
+    }
+    @include media-breakpoint-down(md) {
+      width: 50%;
+    }
   }
   .card {
+    background-color: var(--white-color);
     max-width: 350px;
-    margin: 0 auto 25px;
+    margin: 25px auto 25px;
     padding: 50px 20px;
     box-shadow: 1px 4px 4px 1px #e8e6e6;
     i {

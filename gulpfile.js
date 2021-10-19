@@ -9,11 +9,13 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const replace = require("gulp-replace");
+const browsersync = require("browser-sync").create();
 
 // File paths
 const files = {
   scssPath: "app/scss/**/*.scss",
   jsPath: "app/js/**/*.js",
+  cssPath: "app/css/**/*.css",
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -46,17 +48,45 @@ function cacheBustTask() {
     .pipe(dest("."));
 }
 
+// Browsersync to spin up a local server
+function browserSyncServer(cb) {
+  // initializes browsersync server
+  browsersync.init({
+    server: {
+      baseDir: ".",
+    },
+    notify: {
+      styles: {
+        top: "auto",
+        bottom: "0",
+      },
+    },
+  });
+  cb();
+}
+function browserSyncReload(cb) {
+  // reloads browsersync server
+  browsersync.reload();
+  cb();
+}
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
+  watch("*.html", browserSyncReload);
   watch(
     [files.scssPath, files.jsPath],
     { interval: 1000, usePolling: true }, //Makes docker work
-    series(parallel(scssTask, jsTask), cacheBustTask)
+    series(parallel(scssTask, jsTask), cacheBustTask, browserSyncReload)
   );
 }
 
 // Export the default Gulp task so it can be run
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
-exports.default = series(parallel(scssTask, jsTask), cacheBustTask, watchTask);
+exports.default = series(
+  parallel(scssTask, jsTask),
+  cacheBustTask,
+  browserSyncServer,
+  watchTask
+);

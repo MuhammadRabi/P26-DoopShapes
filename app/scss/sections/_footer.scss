@@ -8,7 +8,66 @@
 /* start footer */
 
 footer {
+  padding-top: var(--mb-32);
+  padding-bottom: var(--mb-32);
   background-color: var(--main-text-color);
   color: var(--white-color);
-  height: 200px;
+  text-align: center;
+  .footer-head {
+    h2 {
+      color: var(--red-color);
+      font-size: 36px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  .footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+    a {
+      margin: 10px 15px 25px;
+      font-size: 14px;
+      transition: $mainTransition;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .copy-rights {
+    font-size: 12px;
+    margin-bottom: var(--mb-24);
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 300px;
+    i {
+      font-size: 24px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: -100%;
+  font-size: 36px;
+  color: var(--main-text-color);
+  transition: $mainTransition;
+  cursor: pointer;
+  &:hover {
+    color: var(--red-color);
+  }
+  &.show {
+    right: 25px;
+  }
 }

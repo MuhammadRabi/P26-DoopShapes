@@ -1,2 +1,2 @@
-let navToggle=document.querySelector(".menu-toggle"),navBar=document.querySelector("nav");navToggle.addEventListener("click",(()=>{navToggle.classList.toggle("active"),navBar.classList.toggle("active")}));
+let navToggle=document.querySelector(".menu-toggle"),navBar=document.querySelector("nav");navToggle.addEventListener("click",(()=>{navToggle.classList.toggle("active"),navBar.classList.toggle("active")}));let scrollBtn=document.querySelector(".scroll-to-top");function scrollToTop(){window.scrollY>700?scrollBtn.classList.add("show"):scrollBtn.classList.remove("show"),scrollBtn.addEventListener("click",(()=>{window.scrollTo({behavior:"smooth",top:0})}))}window.onscroll=scrollToTop;
 //# sourceMappingURL=all.js.map
