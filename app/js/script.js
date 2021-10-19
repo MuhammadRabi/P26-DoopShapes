@@ -1,3 +1,9 @@
-console.log("gulp is working");
+// mobile navbar
 
-let hisWork = document.querySelector("h1");
+let navToggle = document.querySelector(".menu-toggle");
+let navBar = document.querySelector("nav");
+
+navToggle.addEventListener("click", () => {
+  navToggle.classList.toggle("active");
+  navBar.classList.toggle("active");
+});

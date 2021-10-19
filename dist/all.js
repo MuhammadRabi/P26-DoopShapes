@@ -1,2 +1,2 @@
-console.log("gulp is working");let hisWork=document.querySelector("h1");
+let navToggle=document.querySelector(".menu-toggle"),navBar=document.querySelector("nav");navToggle.addEventListener("click",(()=>{navToggle.classList.toggle("active"),navBar.classList.toggle("active")}));
 //# sourceMappingURL=all.js.map

@@ -1,0 +1,59 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+/* start news */
+.news {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  position: relative;
+  h4:first-of-type {
+    color: var(--red-color);
+    font-weight: 700;
+  }
+  .card {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 75px;
+    box-shadow: 1px 4px 4px 1px #e8e6e6;
+    transition: $secondTransition;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color: var(--red-color);
+      color: var(--white-color);
+    }
+    &:hover i {
+      color: var(--white-color);
+    }
+    &:hover h4 {
+      color: var(--white-color);
+    }
+    h3 {
+      font-size: 18 px;
+      font-weight: 600;
+      margin-bottom: -12px;
+    }
+    h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--dark-text-color);
+    }
+    i {
+      position: absolute;
+      font-size: 24px;
+      right: 25px;
+      bottom: 25px;
+      color: var(--red-color);
+    }
+  }
+  .shape {
+    right: 0;
+    top: 100px;
+  }
+}

@@ -1,5 +1,2 @@
 *.md
-!readme.md
-_base.scss
-_header.scss
 node_modules/

@@ -1,0 +1,35 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+/* start office section */
+
+.office {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  position: relative;
+  .office-content {
+    padding: 5px 25px;
+    h4 {
+      color: var(--red-color);
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 45px;
+      font-weight: 700;
+      padding-right: 75px;
+    }
+    p {
+      line-height: 2;
+    }
+  }
+  .shape {
+    right: 0;
+    top: -40%;
+  }
+}
+
+/* end office section */

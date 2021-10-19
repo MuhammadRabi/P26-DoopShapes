@@ -1,0 +1,14 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+/* start footer */
+
+footer {
+  background-color: var(--main-text-color);
+  color: var(--white-color);
+  height: 200px;
+}

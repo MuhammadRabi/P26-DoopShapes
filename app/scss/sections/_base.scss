@@ -1,0 +1,103 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+  h1 {
+    font-size: 60px;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+a.button {
+  display: block;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  text-transform: capitalize;
+  font-size: 15px;
+  text-align: center;
+  width: 75%;
+  transition: $secondTransition;
+  box-shadow: var(--btn-box-shadow);
+  /* @include media-breakpoint-up(lg) {
+    width: 35%;
+  }
+  @include media-breakpoint-only(md) {
+    width: 30%;
+  }
+  */
+
+  &:hover {
+    transform: scale(1.01);
+    color: var(--red-color);
+    background-color: var(--white-color);
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 74px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--light-color);
+}
+
+h2.main-heading {
+  font-size: 45px;
+}
+
+.main-heading {
+  margin-bottom: var(--mb-32);
+}
+
+.shape {
+  position: absolute;
+  z-index: -1;
+}
