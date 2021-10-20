@@ -1,4 +1,6 @@
-/* idenity color */
+/* ==========
+     Globals 
+   ==========*/
 :root {
   --biggest-font-size: 24px;
   --h2-font-size: 20px;
@@ -37,8 +39,6 @@
   }
 }
 
-/** experimental grid mixins **/
-/** experimental grid mixins **/
 /* ============================================
    ============================================ */
 body {
