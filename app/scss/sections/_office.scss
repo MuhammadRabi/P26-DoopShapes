@@ -3,9 +3,10 @@
 @use "../components/variables" as *;
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
-@use "../components/buttons" as *;
 
-/* start office section */
+/* ============================================
+               start office section
+   ============================================ */
 
 .office {
   padding-top: $sectionPadding;
@@ -32,5 +33,3 @@
     top: -40%;
   }
 }
-
-/* end office section */

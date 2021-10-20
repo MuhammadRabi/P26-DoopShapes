@@ -3,9 +3,11 @@
 @use "../components/variables" as *;
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
-@use "../components/buttons" as *;
 
-/* start news */
+/* ============================================
+                start news section
+   ============================================ */
+
 .news {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;

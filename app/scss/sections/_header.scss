@@ -3,9 +3,10 @@
 @use "../components/variables" as *;
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
-@use "../components/buttons" as *;
 
-/* start header */
+/* ==================
+     start header
+   ================== */
 
 header {
   position: relative;
@@ -39,7 +40,7 @@ header {
           position: absolute;
         }
       }
-      ul {
+      .nav__list {
         display: flex;
         width: 50%;
         justify-content: space-evenly;
@@ -50,13 +51,13 @@ header {
           text-align: center;
           width: 100%;
         }
-        li {
-          a {
-            display: block;
-            color: var(--light-color);
+        .nav__item {
+          .nav__link {
+            display: inline-block;
             text-transform: capitalize;
-            padding: 5px 1px;
             transition: $secondTransition;
+            color: var(--light-color);
+            padding: 5px 1px;
             font-size: 15px;
             &.active,
             &:hover {
@@ -77,10 +78,6 @@ header {
       align-items: center;
       @include media-breakpoint-down(lg) {
         display: none;
-      }
-
-      a.button {
-        width: 90px;
       }
     }
   }
@@ -110,7 +107,9 @@ header {
   }
 }
 
-/* start hero area */
+/* =====================
+     start hero area
+   ===================== */
 
 .hero-area {
   height: 100vh;
@@ -195,12 +194,7 @@ header {
     }
 
     .button {
-      width: 40%;
-      @include media-breakpoint-between(md, xl) {
-        width: 45%;
-      }
       @include media-breakpoint-down(md) {
-        width: 100%;
         margin-bottom: var(--mb-24);
       }
     }
@@ -214,8 +208,6 @@ header {
     }
   }
 }
-
-/* end hero area */
 
 /* illasturations animation */
 @keyframes up-and-down {

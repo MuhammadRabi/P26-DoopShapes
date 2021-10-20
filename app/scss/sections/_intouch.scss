@@ -3,9 +3,10 @@
 @use "../components/variables" as *;
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
-@use "../components/buttons" as *;
 
-/* start get in touch */
+/* ============================================
+        start get in touch section
+   ============================================ */
 
 .get__in__touch {
   padding-top: $sectionPadding;
@@ -27,6 +28,9 @@
       &:focus {
         outline: none;
       }
+      &:focus::placeholder {
+        opacity: 0;
+      }
       &::placeholder {
         color: var(--main-text-color);
         text-transform: capitalize;
@@ -41,7 +45,7 @@
     }
     input[type="submit"] {
       margin: auto;
-      width: 120px;
+      width: fit-content;
       color: var(--white-color);
       background-color: var(--red-color);
       padding: 10px 11px;

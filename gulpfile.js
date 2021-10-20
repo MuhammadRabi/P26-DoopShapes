@@ -20,10 +20,13 @@ const files = {
 
 // Sass task: compiles the style.scss file into style.css
 function scssTask() {
-  return src(files.scssPath, { sourcemaps: true }) // set source and turn on sourcemaps
-    .pipe(sass()) // compile SCSS to CSS
-    .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
-    .pipe(dest("dist/css/", { sourcemaps: "." })); // put final CSS in dist folder with sourcemap
+  return (
+    src(files.scssPath, { sourcemaps: true }) // set source and turn on sourcemaps
+      .pipe(sass()) // compile SCSS to CSS
+      /*  .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins*/
+      .pipe(postcss([autoprefixer()])) // PostCSS plugins === turn off minifying ===
+      .pipe(dest("dist/css/", { sourcemaps: "." }))
+  ); // put final CSS in dist folder with sourcemap
 }
 
 // JS task: concatenates and minifies JS files to all.js

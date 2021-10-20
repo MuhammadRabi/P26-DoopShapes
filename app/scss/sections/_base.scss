@@ -3,7 +3,9 @@
 @use "../components/variables" as *;
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
-@use "../components/buttons" as *;
+
+/* ============================================
+   ============================================ */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -53,16 +55,9 @@ a.button {
   text-transform: capitalize;
   font-size: 15px;
   text-align: center;
-  width: 75%;
+  width: fit-content;
   transition: $secondTransition;
   box-shadow: var(--btn-box-shadow);
-  /* @include media-breakpoint-up(lg) {
-    width: 35%;
-  }
-  @include media-breakpoint-only(md) {
-    width: 30%;
-  }
-  */
 
   &:hover {
     transform: scale(1.01);
