@@ -28,7 +28,7 @@ function scrollToTop() {
   });
 }
 
-// navigation
+// scroll to section navigation
 
 let navListItems = document.querySelectorAll(".nav__item a");
 
@@ -46,6 +46,9 @@ function scrollToSection(navLinks) {
         top: sectionToGo,
         behaviour: "smooth",
       });
+      // closing navbar at mobile
+      navToggle.classList.remove("active");
+      navBar.classList.remove("active");
     });
   });
 }
