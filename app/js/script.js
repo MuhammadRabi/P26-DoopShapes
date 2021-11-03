@@ -27,3 +27,27 @@ function scrollToTop() {
     });
   });
 }
+
+// navigation
+
+let navListItems = document.querySelectorAll(".nav__item a");
+
+function scrollToSection(navLinks) {
+  navLinks.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      // remove any active class on navLink on click
+      navLinks.forEach((item) => item.classList.remove("active"));
+      // add active class when clicking a nav link
+      e.currentTarget.classList.add("active");
+      // smooth scroll to desired section automatically
+      let sectionToGo = document.querySelector(e.target.dataset.nav).offsetTop;
+      window.scrollTo({
+        top: sectionToGo,
+        behaviour: "smooth",
+      });
+    });
+  });
+}
+
+scrollToSection(navListItems);

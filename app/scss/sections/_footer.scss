@@ -76,3 +76,23 @@ footer {
     right: 25px;
   }
 }
+
+/* =================
+      scroll bar 
+   ================= */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(49, 69, 132, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(49, 69, 132, 0.8);
+}
